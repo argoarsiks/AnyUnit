@@ -12,7 +12,7 @@ pip install anyunit
 
 ## Quick start
 ```python
-from anyunit import convert_length
+from anyunit import convert_length, convert_weight
 
 print(convert_length(1, "mile", "kilometer"))  # 1.609344
 print(convert_weight(1, "gram", "kilogram"))  # 0.001
