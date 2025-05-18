@@ -65,3 +65,16 @@ WEIGHT = {
     "slug": 14.5939,
     "solar_mass": 1.98847e30
 }
+
+AREA = {
+    'square_meter': 1.0,
+    'square_kilometer': 1000000.0,
+    'square_centimeter': 0.0001,
+    'square_millimeter': 0.000001,
+    'square_foot': 0.092903,
+    'square_inch': 0.00064516,
+    'square_yard': 0.836127,
+    'square_mile': 2589988.11,
+    'acre': 4046.86,
+    'hectare': 10000.0
+}
