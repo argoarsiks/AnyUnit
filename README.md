@@ -10,12 +10,21 @@ Simple and convenient library for converting physical units.
 pip install anyunit
 ```
 
-## Quick start
+## Examples
+Convert length
 ```python
-from anyunit import convert_length, convert_weight
+from anyunit import convert_length
 
-print(convert_length(1, "mile", "kilometer"))  # 1.609344
-print(convert_weight(1, "gram", "kilogram"))  # 0.001
+result = convert_length(1, "kilometer", "meter")
+print(result) # 1000.0
+```
+
+Convert weight
+```python
+from anyunit import convert_weight
+
+result = convert_weight(1, "kilogram", "gram")
+print(result) # 1000.0
 ```
 
 ## License
