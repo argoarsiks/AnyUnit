@@ -1,4 +1,4 @@
-from .units import LENGTH, WEIGHT
+from .units import LENGTH, WEIGHT, AREA
 
 
 def convert_length(value : float, from_unit : str, to_unit : str) -> float:
@@ -43,3 +43,11 @@ def convert_weight(value: float, from_unit : str, to_unit : str) -> float:
     if to_unit not in WEIGHT:
         raise ValueError(f"{to_unit} is unknown unit. Available: {", ".join(WEIGHT.keys())}")
     return value * WEIGHT[from_unit] / WEIGHT[to_unit]
+
+
+def convert_area(value : float, from_unit : str, to_unit : str) -> float:
+    if from_unit not in AREA:
+        raise ValueError(f"'{from_unit}' is unknown unit. Available: {", ".join(AREA.keys())}")
+    if to_unit not in AREA:
+        raise ValueError(f"{to_unit} is unknown unit. Available: {", ".join(AREA.keys())}")
+    return value * AREA[from_unit] / AREA[to_unit]
