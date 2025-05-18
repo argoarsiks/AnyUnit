@@ -24,6 +24,20 @@ def convert_length(value : float, from_unit : str, to_unit : str) -> float:
 
 
 def convert_weight(value: float, from_unit : str, to_unit : str) -> float:
+    """
+    Converts units of weight.
+    Parameters:
+        value (float): Numeric value for conversion
+        from_unit (str): Reference unit of measure (e.g. 'gram')
+        to_unit (str): Target unit of measure (e.g. 'kilogram')
+    Returns:
+        float: Conversion result
+    Examples:
+        >>> convert_weight(1, "gram", "kilogram")
+        0.001
+        >>> convert_length(100, "kilogram", "gram")
+        100000.0
+    """
     if from_unit not in WEIGHT:
         raise ValueError(f"'{from_unit}' is unknown unit. Available: {", ".join(WEIGHT.keys())}")
     if to_unit not in WEIGHT:
