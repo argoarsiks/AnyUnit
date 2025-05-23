@@ -78,3 +78,23 @@ AREA = {
     'acre': 4046.86,
     'hectare': 10000.0
 }
+
+VOLUME = {
+    "meter": 1000.0,
+    "liter": 1.0,
+    "decaliter": 10.0,
+    "centiliter": 0.01,
+    "milliliter": 0.001,
+    "microliter": 1e-6,
+    "kilometer": 1e12,
+    "centimeter": 0.001,
+    "millimeter": 1e-6,
+    "decimeter": 1.0,
+
+    "gallon": 3.78541,
+    "imperial_gallon": 4.54609,
+    "quart": 0.946353,
+    "imperial_quart": 1.13652,
+    "pint": 0.473176,
+    "imperial_pint": 0.568261
+}
