@@ -67,14 +67,14 @@ WEIGHT = {
 }
 
 AREA = {
-    'square_meter': 1.0,
-    'square_kilometer': 1000000.0,
-    'square_centimeter': 0.0001,
-    'square_millimeter': 0.000001,
-    'square_foot': 0.092903,
-    'square_inch': 0.00064516,
-    'square_yard': 0.836127,
-    'square_mile': 2589988.11,
+    'meter': 1.0,
+    'kilometer': 1000000.0,
+    'centimeter': 0.0001,
+    'millimeter': 0.000001,
+    'foot': 0.092903,
+    'inch': 0.00064516,
+    'yard': 0.836127,
+    'mile': 2589988.11,
     'acre': 4046.86,
     'hectare': 10000.0
 }
