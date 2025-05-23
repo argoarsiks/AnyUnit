@@ -55,9 +55,9 @@ def convert_area(value : float, from_unit : str, to_unit : str) -> float:
     Returns:
         float: Conversion result
     Examples:
-        >>> convert_area(1, "acre", "square meter")
+        >>> convert_area(1, "acre", "meter")
         4046.8564224
-        >>> convert_area(100, "square foot", "square meter")
+        >>> convert_area(100, "foot", "meter")
         9.290304
     """
     if from_unit not in AREA:
