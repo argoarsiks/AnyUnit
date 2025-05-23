@@ -17,9 +17,9 @@ def convert_length(value : float, from_unit : str, to_unit : str) -> float:
         328.084
     """
     if from_unit not in LENGTH:
-        raise ValueError(f"'{from_unit}' is unknown unit. Available: {", ".join(LENGTH.keys())}")
+        raise ValueError(f"'{from_unit}' is unknown unit. Available: {', '.join(LENGTH.keys())}")
     if to_unit not in LENGTH:
-        raise ValueError(f"{to_unit} is unknown unit. Available: {", ".join(LENGTH.keys())}")
+        raise ValueError(f"'{to_unit}' is unknown unit. Available: {', '.join(LENGTH.keys())}")
     return value * LENGTH[from_unit] / LENGTH[to_unit]
 
 
@@ -39,15 +39,29 @@ def convert_weight(value: float, from_unit : str, to_unit : str) -> float:
         100000.0
     """
     if from_unit not in WEIGHT:
-        raise ValueError(f"'{from_unit}' is unknown unit. Available: {", ".join(WEIGHT.keys())}")
+        raise ValueError(f"'{from_unit}' is unknown unit. Available: {', '.join(WEIGHT.keys())}")
     if to_unit not in WEIGHT:
-        raise ValueError(f"{to_unit} is unknown unit. Available: {", ".join(WEIGHT.keys())}")
+        raise ValueError(f"'{to_unit}' is unknown unit. Available: {', '.join(WEIGHT.keys())}")
     return value * WEIGHT[from_unit] / WEIGHT[to_unit]
 
 
 def convert_area(value : float, from_unit : str, to_unit : str) -> float:
+    """
+    Converts units of area.
+    Parameters:
+        value (float): Numeric value for conversion
+        from_unit (str): Reference unit of measure (e.g. 'acre')
+        to_unit (str): Target unit of measure (e.g. 'hectare')
+    Returns:
+        float: Conversion result
+    Examples:
+        >>> convert_area(1, "acre", "square meter")
+        4046.8564224
+        >>> convert_area(100, "square foot", "square meter")
+        9.290304
+    """
     if from_unit not in AREA:
-        raise ValueError(f"'{from_unit}' is unknown unit. Available: {", ".join(AREA.keys())}")
+        raise ValueError(f"'{from_unit}' is unknown unit. Available: {', '.join(AREA.keys())}")
     if to_unit not in AREA:
-        raise ValueError(f"{to_unit} is unknown unit. Available: {", ".join(AREA.keys())}")
+        raise ValueError(f"'{to_unit}' is unknown unit. Available: {', '.join(AREA.keys())}")
     return value * AREA[from_unit] / AREA[to_unit]
