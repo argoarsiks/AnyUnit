@@ -1,4 +1,4 @@
-from .units import LENGTH, WEIGHT, AREA
+from .units import *
 
 
 def convert_length(value : float, from_unit : str, to_unit : str) -> float:
@@ -65,3 +65,25 @@ def convert_area(value : float, from_unit : str, to_unit : str) -> float:
     if to_unit not in AREA:
         raise ValueError(f"'{to_unit}' is unknown unit. Available: {', '.join(AREA.keys())}")
     return value * AREA[from_unit] / AREA[to_unit]
+
+
+def convert_volume(value : float, from_unit : str, to_unit : str) -> float:
+    """
+    Converts units of volume.
+    Parameters:
+        value (float): Numeric value for conversion
+        from_unit (str): Reference unit of measure (e.g. 'gallon')
+        to_unit (str): Target unit of measure (e.g. 'liter')
+    Returns:
+        float: Conversion result
+    Examples:
+        >>> convert_volume(1, "gallon", "liter")
+        3.78541
+        >>> convert_volume(100, "milliliter", "meter")
+        0.1
+    """
+    if from_unit not in VOLUME:
+        raise ValueError(f"'{from_unit}' is unknown unit. Available: {', '.join(VOLUME.keys())}")
+    if to_unit not in VOLUME:
+        raise ValueError(f"'{to_unit}' is unknown unit. Available: {', '.join(VOLUME.keys())}")
+    return value * VOLUME[from_unit] / VOLUME[to_unit]
