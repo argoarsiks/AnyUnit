@@ -34,3 +34,11 @@ from anyunit import convert_area
 result = convert_area(1, "kilometer", "mile")
 print(result) # 0.38610215859253505
 ```
+
+Get all units
+```python
+from anyunit import getAllUnits
+
+result = getAllUnits()
+print(result) # {'LENGTH': ['meter', 'kilometer', ... ], 'WEIGHT': ['kilogram', 'gram', ... ], ...}
+```
