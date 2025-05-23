@@ -35,6 +35,14 @@ result = convert_area(1, "kilometer", "mile")
 print(result) # 0.38610215859253505
 ```
 
+Convert volume
+```python
+from anyunit import convert_volume
+
+result = convert_volume(1, "liter", "gallon")
+print(result) # 0.26417217685798894
+```
+
 Get all units
 ```python
 from anyunit import getAllUnits
