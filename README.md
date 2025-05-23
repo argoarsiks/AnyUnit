@@ -27,5 +27,10 @@ result = convert_weight(1, "kilogram", "gram")
 print(result) # 1000.0
 ```
 
-## License
-MIT
+Convert area
+```python
+from anyunit import convert_area
+
+result = convert_area(1, "kilometer", "mile")
+print(result) # 0.38610215859253505
+```
